@@ -1,0 +1,90 @@
+.about-container {
+  text-align: center;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  text-align: left;
+}
+
+.about-text {
+  h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    margin: 0 0 2rem 0;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .about-description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+    margin: 0 0 1.5rem 0;
+  }
+}
+
+.about-highlights {
+  display: flex;
+  gap: 2rem;
+  margin-top: 3rem;
+
+  .highlight-item {
+    text-align: center;
+    flex: 1;
+
+    .highlight-number {
+      display: block;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .highlight-label {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+  }
+}
+
+.about-image {
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+
+  img {
+    border-radius: var(--radius-md);
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 900px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .about-text {
+    order: 2;
+  }
+
+  .about-image {
+    order: 1;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .about-highlights {
+    justify-content: center;
+  }
+}

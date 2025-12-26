@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Instrument+Sans:wght@400;500;600&display=swap');
+
+:root {
+  color-scheme: dark;
+  --bg-base: #070a15;
+  --bg-panel: rgba(18, 24, 41, 0.75);
+  --bg-panel-strong: rgba(15, 20, 36, 0.95);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --primary: #8dd8ff;
+  --accent: #ff9d7c;
+  --accent-strong: #fb5a81;
+  --text: #f2f5ff;
+  --text-muted: rgba(242, 245, 255, 0.75);
+  --pill: rgba(255, 255, 255, 0.08);
+  --shadow-soft: 0 20px 60px rgba(3, 8, 29, 0.65);
+  --radius-lg: 28px;
+  --radius-md: 18px;
+  --radius-sm: 12px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Space Grotesk', 'Instrument Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at 20% 20%, rgba(255, 117, 117, 0.15), transparent 45%),
+    radial-gradient(circle at 80% 0%, rgba(85, 145, 255, 0.2), transparent 50%),
+    radial-gradient(circle at 100% 60%, rgba(255, 189, 89, 0.18), transparent 45%),
+    var(--bg-base);
+  color: var(--text);
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+section {
+  padding: clamp(3rem, 5vw, 5.5rem) clamp(1.25rem, 4vw, 4rem);
+}
+
+.container {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+}
+
+.glass {
+  background: var(--bg-panel);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(12px);
+}

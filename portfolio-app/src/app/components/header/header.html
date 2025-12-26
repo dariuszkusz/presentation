@@ -1,0 +1,23 @@
+<div class="header-container">
+  <div class="logo">
+    <img src="assets/icons/logo-transparent.png" alt="Logo" />
+  </div>
+  <nav>
+    <a (click)="smoothScroll($event, 'hero')" href="#hero">{{ translate('nav.home') }}</a>
+    <a (click)="smoothScroll($event, 'about')" href="#about">{{ translate('nav.about') }}</a>
+    <a (click)="smoothScroll($event, 'technologies')" href="#technologies">{{ translate('nav.technologies') }}</a>
+    <a (click)="smoothScroll($event, 'companies')" href="#companies">{{ translate('nav.companies') }}</a>
+    <a (click)="smoothScroll($event, 'projects')" href="#projects">{{ translate('nav.projects') }}</a>
+    <a (click)="smoothScroll($event, 'experience')" href="#experience">{{ translate('nav.experience') }}</a>
+    <a (click)="smoothScroll($event, 'contact')" href="#contact">{{ translate('nav.contact') }}</a>
+    <a (click)="smoothScroll($event, 'blog')" href="#blog">{{ translate('nav.blog') }}</a>
+  </nav>
+  <div class="lang-switch">
+    <button (click)="setLanguage('en')">
+      <img src="assets/icons/gb.png" alt="EN" />
+    </button>
+    <button (click)="setLanguage('pl')">
+      <img src="assets/icons/pl.png" alt="PL" />
+    </button>
+  </div>
+</div>

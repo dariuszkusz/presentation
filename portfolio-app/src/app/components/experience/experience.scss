@@ -1,0 +1,125 @@
+.experience-container {
+  text-align: center;
+
+  h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    margin: 0 0 3rem 0;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.timeline {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--accent), var(--primary));
+    transform: translateX(-50%);
+  }
+}
+
+.timeline-item {
+  display: flex;
+  margin-bottom: 3rem;
+  position: relative;
+
+  &:nth-child(odd) {
+    flex-direction: row-reverse;
+
+    .timeline-date {
+      text-align: left;
+      padding-left: 2rem;
+      padding-right: 0;
+    }
+
+    .timeline-content {
+      margin-right: 2rem;
+      margin-left: 0;
+    }
+  }
+}
+
+.timeline-date {
+  flex: 0 0 150px;
+  padding: 1rem 0 1rem 2rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-align: right;
+}
+
+.timeline-content {
+  flex: 1;
+  padding: 2rem;
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  background: var(--bg-panel);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(12px);
+  margin-left: 2rem;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 40px rgba(3, 8, 29, 0.7);
+    border-color: var(--accent);
+  }
+
+  h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+    color: var(--text);
+  }
+
+  .company {
+    color: var(--accent);
+    font-weight: 500;
+    margin: 0 0 1rem 0;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 1.5rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline {
+    &::before {
+      left: 2rem;
+    }
+  }
+
+  .timeline-item {
+    flex-direction: column !important;
+
+    .timeline-date {
+      flex: none;
+      text-align: left !important;
+      padding-left: 3rem !important;
+      padding-right: 0;
+    }
+
+    .timeline-content {
+      margin: 0 0 0 3rem !important;
+    }
+  }
+}
